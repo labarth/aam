@@ -27,5 +27,14 @@ module.exports = {
   },
   rules: {
     'linebreak-style': 'off',
+    'import/prefer-default-export': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    'react/jsx-curly-brace-presence': [
+      'error',
+      {
+        props: 'never',
+        children: 'ignore',
+      },
+    ],
   },
 };
