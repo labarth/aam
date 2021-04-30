@@ -1,13 +1,11 @@
-import { combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
-import { applyMiddleware, createStore as _createStore, compose } from 'redux';
+import { applyMiddleware, createStore as _createStore, compose, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import logger from 'redux-logger';
 
 export const rootReducer = combineReducers({
   App: () => 'Hello world!',
 });
-
 
 const sagaMiddleware = createSagaMiddleware();
 
