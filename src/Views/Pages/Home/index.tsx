@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import axios, { AxiosResponse } from 'axios';
 import { NavLink } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -52,6 +53,10 @@ const useStyles = makeStyles((theme) => ({
 
 export const Home: React.FC = () => {
   const classes = useStyles();
+
+  useEffect(() => {
+    axios.get('api/hello').then((res: AxiosResponse) => console.log(res.data));
+  }, []);
 
   return (
     <div className={classes.root}>
